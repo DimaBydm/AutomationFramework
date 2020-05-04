@@ -11,20 +11,26 @@ import org.openqa.selenium.support.FindBy;
 // Наследуем бейз пейдж:
 public class MainPage extends BasePage{
 
+    //// Локаторы:
+
     // Аннтоация:
     // указываем локатор
     // в данном случае сss
     @FindBy(css = "a.login")
-
     // Указываем веб элемент и его название:
     private WebElement signInButton;
+
+    @FindBy(id = "email")
+    private WebElement emailField;
+
+    ////
 
     // Создается автоматом после наследования бейз пейджа:
     public MainPage(WebDriver driver) {
         super(driver);
     }
 
-    //Методы:
+    //// Методы:
 
     //Открытия страницы:
     public void openMainPage() {
@@ -34,5 +40,13 @@ public class MainPage extends BasePage{
     // Нажатия кнопки указанного элемента:
     public void clickOnSignInButton() {
         element(signInButton).click();
-  }
+    }
+
+    // Записи в поле емеила почты нашего аккаунта:
+    public void fillEmailAddress(String email){
+        element(emailField).sendKeys(email);
+    }
+
+    ////
+
 }

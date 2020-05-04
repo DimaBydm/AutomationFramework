@@ -11,5 +11,7 @@ public class LoginTest extends SampleTest {
     public void loginTest() {
         user.mainPage.openMainPage();
         user.mainPage.clickOnSignInButton();
+        // TODO:
+        user.mainPage.fillEmailAddress("automationstep@gmail.com");
     }
 }
