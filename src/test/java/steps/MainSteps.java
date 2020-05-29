@@ -26,4 +26,22 @@ public class MainSteps extends ScenarioSteps {
     public void fillEmailAddress(String email) {
         onPage.fillEmailAddress(email);
     }
+
+    @Step
+    public void fillPasswordAddress(String password) {
+        onPage.fillPasswordAddress(password);
+    }
+
+    @Step
+    public  void clickOnSubmitLoginButton(){
+        onPage.clickOnSubmitLoginButton();
+    }
+    @Step
+    public void clickOnWomenTab (){
+        onPage.clickOnWomenTab();
+    }
+    @Step
+    public void checkOrangeColorsOnItems(){
+        onPage.checkOrangeColorsOnItems();
+    }
 }
